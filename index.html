@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="Javascript.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h1 class="section-title"></h1>
+        <h1 class="samchan">Samantha Chan</h1>
+        <p class="about-text">Greetings!</p>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-container">
+          <!-- Project 1 -->
+          <div class="portfolio-item">
+            <div
+              class="project-box"
+              onclick="openPopup('Project 1', 'PikachuTest.jpg')"
+            >
+              <img src="PikachuTest.jpg" alt="Project 1 Image 1" />
+              <h3>Project 1</h3>
+              <p>Description of Project 1.</p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="portfolio-item">
+            <div
+              class="project-box"
+              onclick="openPopup('Project 2', 'PikachuTest.jpg')"
+            >
+              <img src="PikachuTest.jpg" alt="Project 2 Image 1" />
+              <h3>Project 2</h3>
+              <p>Description of Project 2.</p>
+            </div>
+          </div>
+
+             <!-- Project 3 -->
+             <div class="portfolio-item">
+              <div
+                class="project-box"
+                onclick="openPopup('Project 3', 'PikachuTest.jpg')"
+              >
+                <img src="PikachuTest.jpg" alt="Project 3 Image 1" />
+                <h3>Project 3</h3>
+                <p>Description of Project 3.</p>
+              </div>
+            </div>
+
+               <!-- Project 4 -->
+          <div class="portfolio-item">
+            <div
+              class="project-box"
+              onclick="openPopup('Project 4', 'PikachuTest.jpg')"
+            >
+              <img src="PikachuTest.jpg" alt="Project 4 Image 1" />
+              <h3>Project 4</h3>
+              <p>Description of Project 4.</p>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- The Popup -->
+        <div id="popup" class="popup">
+          <span class="close-btn" onclick="closePopup()">×</span>
+          <div class="popup-content">
+            <div class="popup-text">
+              <h2 id="popup-title">Project Title</h2>
+              <p id="popup-description">Project Description</p>
+            </div>
+            <div class="gallery-container">
+              <div id="gallery" class="image-gallery" data-index="0">
+                <!-- Gallery images will be dynamically added here -->
+                <!-- Project 1 Images -->
+                <img src="IMG_2076.PNG" alt="Project 1 Image 1" />
+                <img src="PikachuTest.jpg" alt="Project 1 Image 2" />
+                <img src="IMG_2076.PNG" alt="Project 1 Image 3" />
+                <img src="PikachuTest.jpg" alt="Project 1 Image 4" />
+                <img src="IMG_2076.PNG" alt="Project 1 Image 5" />
+
+                <!-- Project 2 Images -->
+                <img src="IMG_2076.PNG" alt="Project 2 Image 1" />
+                <img src="PikachuTest.jpg" alt="Project 2 Image 2" />
+                <img src="IMG_2076.PNG" alt="Project 2 Image 3" />
+                <img src="PikachuTest.jpg" alt="Project 2 Image 4" />
+                <img src="IMG_2076.PNG" alt="Project 2 Image 5" />
+
+                <!-- Project 3 Images -->
+                <img src="IMG_2076.PNG" alt="Project 3 Image 1" />
+                <img src="PikachuTest.jpg" alt="Project 3 Image 2" />
+                <img src="IMG_2076.PNG" alt="Project 3 Image 3" />
+                <img src="PikachuTest.jpg" alt="Project 3 Image 4" />
+                <img src="IMG_2076.PNG" alt="Project 3 Image 5" />
+
+                <!-- Project 4 Images -->
+                <img src="IMG_2076.PNG" alt="Project 4 Image 1" />
+                <img src="PikachuTest.jpg" alt="Project 4 Image 2" />
+                <img src="IMG_2076.PNG" alt="Project 4 Image 3" />
+                <img src="PikachuTest.jpg" alt="Project 4 Image 4" />
+                <img src="IMG_2076.PNG" alt="Project 4 Image 5" />
+              </div>
+
+              <div class="navigation-buttons">
+                <button class="prev-btn" onclick="changePopupImage(-1)">
+                  Previous
+                </button>
+                <button class="next-btn" onclick="changePopupImage(1)">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Work Section -->
+<section id="work" class="section">
+  <div class="container">
+    <h2 class="section-title">Work Experience and Extracurriculars</h2>
+
+    <!-- Job 1 -->
+    <div class="work-item" onclick="openWorkPopup('', ['WorkImage1.jpg', 'WorkImage2.jpg'])">
+      <div class="text">
+        <h3>Job Title 1</h3>
+        <p>Company/Organization Name 1</p>
+        <p>Date Started - Date Ended</p>
+        <p>Description of responsibilities and achievements in this role...</p>
+      </div>
+      <div class="media">
+        <img src="WorkImage1.jpg" alt="Job 1 Photo" />
+      </div>
+    </div>
+
+    <!-- Job 2 -->
+    <div class="work-item" onclick="openWorkPopup('', ['WorkImage3.jpg', 'WorkImage4.jpg'])">
+      <div class="text">
+        <h3>Job Title 2</h3>
+        <p>Company/Organization Name 2</p>
+        <p>Date Started - Date Ended</p>
+        <p>Description of responsibilities and achievements in this role...</p>
+      </div>
+      <div class="media">
+        <!-- Add -->
+        <img src="WorkImage2.jpg" alt="Job 2 Photo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p>
+          Feel free to reach out to me for collaborations or just to say hello!
+        </p>
+        <form action="#" method="post">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+
+<!-- The Work Popup -->
+<div id="work-popup">
+  <span class="close-btn" onclick="closeWorkPopup()">×</span>
+  <div id="work-popup-content">
+    <div id="work-popup-title"></div>
+    <div id="work-gallery" class="image-gallery" data-index="0">
+      <!-- add -->
+    </div>
+    <div class="navigation-buttons">
+      <button class="prev-btn" onclick="changeWorkPopupMedia(-1)">Previous</button>
+      <button class="next-btn" onclick="changeWorkPopupMedia(1)">Next</button>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
