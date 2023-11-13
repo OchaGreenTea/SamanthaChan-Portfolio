@@ -1,0 +1,388 @@
+body {
+    font-family: 'Lucida Sans', sans-serif;
+    color: black; 
+    min-height: 100vh; 
+    overflow-x: hidden;
+    margin: 0px;
+    background-color: #15144e;
+  }
+  
+  .header {
+    padding: 35px;
+    display: flex;
+    color: white;
+    background-color: #f3f0ef;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+
+  .navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 45px;
+    font-size: 16px;
+  }
+
+  body{
+    padding-top: 60px;
+  }
+
+  /* Center Section Titles */
+.section-title {
+  text-align: center;
+}
+
+.section{
+  justify-content: space-around;
+}
+
+.samchan{
+  position: absolute;
+  top: 38%; 
+  left: 30%; 
+  transform: translate(-50%, -50%); 
+  font-size: 3em; 
+  color: white; 
+  font-family: 'Lucida Grande', sans-serif;
+}
+
+.about-text {
+  position: absolute;
+  top: 50%; 
+  left: 15%; 
+  transform: translate(-50%, -50%); 
+  font-size: 1.5em; 
+  color: white; 
+  font-family: 'Lucida Sans Regular', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .samchan {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1.2em;
+  }
+}
+
+  
+  /* About Section */
+  #about {
+    padding-top: 60px;
+    height: 100vh;
+    background-image: url('about.JPG'); 
+    background-size: cover;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black; 
+    margin-bottom: 200px;
+  }
+  
+  /* Portfolio Section */
+  #portfolio {
+    height: 100vh;
+    background-image: url('projects.JPG'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black; 
+    margin-bottom: 10px; 
+  }
+
+ /* Work Section */
+#work {
+  height: 100vh;
+  background-image: url('Work.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  margin-bottom: 30px;
+}
+
+.text {
+  width: 5000px;
+}
+
+.media {
+  width: 150%;
+}
+
+.media img {
+  max-width: 200%;
+  height: auto;
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: right;
+  margin-top: 20px;
+}
+
+.prev-btn,
+.next-btn {
+  font-size: 16px;
+  background: #000000;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 8px 16px;
+  margin-bottom: 8px; 
+}
+
+  
+  /* Contact Section */
+  #contact {
+    height: 100vh;
+    background-image: url('Contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black; 
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Project Containers */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  width: 100%;
+  margin: 0;
+}
+
+
+/* Adjust  width of each project box */
+.portfolio-item {
+  width: 49%; 
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 100%; 
+  }
+}
+
+/* Project Boxes */
+.project-box {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  padding: 45px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-box img {
+  max-width: 100%;
+  max-height: 45vh;
+  height: auto;
+}
+
+.project-box h3 {
+  margin: 20px 0;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(197, 197, 197, 0.288);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.popup-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+  padding: 5% 80px; 
+}
+
+.gallery-container {
+  width: 60%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.popup-text {
+  flex: 1;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 50%;
+  margin-left: 5%; 
+  width: 1200px;
+  height: 500px;
+}
+
+#popup-title {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: left; 
+}
+
+#popup-description {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+.image-gallery {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 800px; 
+  margin-left: 210px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+  
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+ /* Work Popup */
+#work-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(197, 197, 197, 0.288); 
+  z-index: 1000;
+  overflow: hidden;
+}
+
+#work-popup-content {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100%;
+}
+
+#work-gallery {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 3000px; 
+  height: 700px;
+}
+
+#work-gallery img,
+#work-gallery video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.prev-btn,
+.next-btn {
+  font-size: 16px;
+  background: #000000;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 8px 16px; 
+  margin-bottom: 8px;
+}
+
+  
+  form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  button {
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
