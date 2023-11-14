@@ -5,12 +5,10 @@ function openPopup(title, firstImage) {
     document.getElementById('popup-title').innerText = title;
     document.getElementById('popup-description').innerText = getDescription(title);
     
-    // Clear existing images
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = '';
 
   
-    // Add images to gallery
     for (let i = 1; i <= 5; i++) {
         const imgSrc = `${title.toLowerCase().replace(/\s/g, '')}_${i}.jpg`;
         const img = document.createElement('img');
@@ -20,7 +18,7 @@ function openPopup(title, firstImage) {
         console.log('Image path:', imgSrc);
       }
   
-    // Set  first image as displayed one
+    // Set first image as the displayed one
     gallery.setAttribute('data-index', '0');
     changePopupImage(0);
 
@@ -32,7 +30,7 @@ function openPopup(title, firstImage) {
   function closePopup() {
     console.log('closePopup function called.');
     document.getElementById('popup').style.display = 'none';
-    // Enable scrolling when close
+    // Enable scrolling on close
     document.body.style.overflow = 'auto';
   }
   
@@ -88,11 +86,12 @@ function openWorkPopup(title, mediaList) {
       gallery.appendChild(element);
     });
   
-    // Set first media as displayed one
+    // Set first media as the displayed one
     gallery.setAttribute('data-index', '0');
     changeWorkPopupMedia(0);
   }
   
+  // Add new helper functions for creating image and video
   function createImageElement(src, alt) {
     const img = document.createElement('img');
     img.src = src;
@@ -104,45 +103,43 @@ function openWorkPopup(title, mediaList) {
     const video = document.createElement('video');
     video.src = src;
     video.alt = alt;
-    video.controls = true;
+    video.controls = true; 
     return video;
   }
   
+  
+ // Function to change displayed media in Work Popup
 function changeWorkPopupMedia(n) {
     const gallery = document.getElementById('work-gallery');
     let currentIndex = parseInt(gallery.getAttribute('data-index'), 10);
     const mediaItems = gallery.children;
   
+    // Calculate new index
     let newIndex = currentIndex + n;
   
+    // Ensure new index is within bounds
     if (newIndex < 0) {
       newIndex = mediaItems.length - 1;
     } else if (newIndex >= mediaItems.length) {
       newIndex = 0;
     }
-  
-    // Hide current media item
+
     mediaItems[currentIndex].style.display = 'none';
   
-    // Display new media item
     mediaItems[newIndex].style.display = 'flex';
   
-    // Update data-index attribute
     gallery.setAttribute('data-index', newIndex.toString());
   }
   
-  // Function to close Work Popup
+  // Function to close the Work Popup
   function closeWorkPopup() {
     const gallery = document.getElementById('work-gallery');
-  
-    // Hide all media items
+
     Array.from(gallery.children).forEach((mediaItem) => {
       mediaItem.style.display = 'none';
     });
   
-    // Reset data-index attribute
     gallery.setAttribute('data-index', '0');
   
-    // Hide Work Popup
     document.getElementById('work-popup').style.display = 'none';
   }
