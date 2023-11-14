@@ -1,14 +1,15 @@
+
 body {
     font-family: 'Lucida Sans', sans-serif;
     color: black; 
     min-height: 100vh; 
     overflow-x: hidden;
-    margin: 0px;
+    margin: 0%;
     background-color: #15144e;
   }
   
   .header {
-    padding: 35px;
+    padding: 3%;
     display: flex;
     color: white;
     background-color: #f3f0ef;
@@ -22,57 +23,58 @@ body {
 
   .navbar {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
   }
 
   .navbar a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    margin: 0 45px;
-    font-size: 16px;
+    margin: 0 45%;
+    font-size: 100%;
   }
 
   body{
-    padding-top: 60px;
+    padding-top: 7%;
   }
 
   /* Center Section Titles */
 .section-title {
   text-align: center;
+  font-size: 2.5em;
 }
 
 .section{
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .samchan{
   position: absolute;
-  top: 38%; 
+  top: 31%; 
   left: 30%; 
   transform: translate(-50%, -50%); 
-  font-size: 3em; 
+  font-size: 3.5em; 
   color: white; 
   font-family: 'Lucida Grande', sans-serif;
 }
 
 .about-text {
   position: absolute;
-  top: 50%; 
-  left: 15%; 
+  top: 45%; 
+  left: 20%; 
   transform: translate(-50%, -50%); 
   font-size: 1.5em; 
   color: white; 
   font-family: 'Lucida Sans Regular', sans-serif;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .samchan {
-    font-size: 1.2em;
+    font-size: 3em;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .about-text {
     font-size: 1.2em;
   }
@@ -81,65 +83,79 @@ body {
   
   /* About Section */
   #about {
-    padding-top: 60px;
-    height: 100vh;
+    padding-top: 2%;
+    height: 100vh; 
     background-image: url('about.JPG'); 
-    background-size: cover;
+    background-size:cover;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
     color: black; 
-    margin-bottom: 200px;
+    margin-bottom: 20px;
   }
   
   /* Portfolio Section */
   #portfolio {
-    height: 100vh;
-    background-image: url('projects.JPG'); 
+    height: 140vh; 
+    background-image: url('projects.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: black; 
-    margin-bottom: 10px; 
+    margin-bottom: 15%; 
   }
 
  /* Work Section */
 #work {
-  height: 100vh;
-  background-image: url('Work.jpg');
-  background-size: cover;
+  height: 120vh;
+  background-image: url('work.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  color: black;
-    display: flex;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   justify-content: center;
 }
 
+.work-and-extracurricular {
+  position: absolute;
+  top: 265%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 1.5em; 
+  color: white; 
+  font-family: 'Lucida Sans Regular', sans-serif;
+}
+
 .work-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; 
+  width: 80%;
+  max-width: 800px;
   margin-bottom: 30px;
 }
 
 .text {
-  width: 5000px;
+  width: 100%;
+  text-align: left;
+  max-width: 800px;
+  font-size: 1.2em;
 }
 
 .media {
-  width: 150%;
+  width: 100%;
+  max-width: 800px;
 }
 
 .media img {
-  max-width: 200%;
+  max-width: 80%;
   height: auto;
+  border-radius: 8px;
 }
 
 .navigation-buttons {
   display: flex;
-  align-items: right;
+  align-items: flex-end;
   margin-top: 20px;
 }
 
@@ -157,8 +173,8 @@ body {
   
   /* Contact Section */
   #contact {
-    height: 100vh;
-    background-image: url('Contact.jpg');
+    height: 100vh; 
+    background-image: url('contact.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -175,16 +191,14 @@ body {
 .project-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 100%;
-  margin: 0;
 }
 
 
-/* Adjust  width of each project box */
 .portfolio-item {
   width: 49%; 
-  margin-bottom: 20px;
+  margin-bottom: 2%;
 }
 
 @media (max-width: 768px) {
@@ -196,8 +210,8 @@ body {
 /* Project Boxes */
 .project-box {
   cursor: pointer;
-  background-color: rgb(255, 255, 255);
-  padding: 45px; 
+  background-color: rgb(255, 255, 255); 
+  padding: 10%;
   border-radius: 8px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -209,7 +223,7 @@ body {
 }
 
 .project-box h3 {
-  margin: 20px 0;
+  margin: 9% 0;
 }
 
 .popup {
@@ -219,17 +233,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(197, 197, 197, 0.288);
+background: rgba(0, 0, 0, 0.185);
   z-index: 1000;
   overflow: hidden;
 }
 
 .popup-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
   height: 80%;
-  padding: 5% 80px; 
+  padding: 5% 5%;
 }
 
 .gallery-container {
@@ -237,26 +251,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 1%;
 }
 
 .popup-text {
   flex: 1;
-  padding: 20px;
+  padding: 1.5%;
   color: rgb(0, 0, 0);
   text-align: center;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  max-width: 50%;
-  margin-left: 5%; 
+  max-width: 50%; 
+  margin-left: 5%;
   width: 1200px;
   height: 500px;
 }
 
 #popup-title {
   background-color: rgb(255, 255, 255);
-  padding: 10px;
+  padding: 1%;
   text-align: left; 
 }
 
@@ -362,13 +376,13 @@ body {
 
 .prev-btn,
 .next-btn {
-  font-size: 16px;
+  font-size: 16px; 
   background: #000000;
   border: none;
   cursor: pointer;
   color: white;
   padding: 8px 16px; 
-  margin-bottom: 8px;
+  margin-bottom: 8px; 
 }
 
   
